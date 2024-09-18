@@ -5,7 +5,7 @@ export const getAllJokes = async () => {
 };
 
 export const postJoke = async (newJoke) => {
-  const response = await fetch("http://localhost:8088/jokes", {
+  await fetch("http://localhost:8088/jokes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export const postJoke = async (newJoke) => {
 
 export const toggleJoke = async (toldJoke) => {
   console.log("untell working");
-  const response = await fetch(`http://localhost:8088/jokes/${toldJoke.id}`, {
+  await fetch(`http://localhost:8088/jokes/${toldJoke.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
